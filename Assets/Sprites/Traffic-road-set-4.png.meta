@@ -1,0 +1,780 @@
+fileFormatVersion: 2
+guid: 3ff0c229a0e3f40b78d0c0a291bcc32e
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -2406119681403156974
+    second: Traffic-road-set-4_0
+  - first:
+      213: 7491792207859463653
+    second: Traffic-road-set-4_1
+  - first:
+      213: 2954440511470547249
+    second: Traffic-road-set-4_2
+  - first:
+      213: -6440490582675304679
+    second: Traffic-road-set-4_3
+  - first:
+      213: 6862068110970872472
+    second: Traffic-road-set-4_4
+  - first:
+      213: -6183275239927563073
+    second: Traffic-road-set-4_5
+  - first:
+      213: -3287596765996437694
+    second: Traffic-road-set-4_6
+  - first:
+      213: 1008203485181154784
+    second: Traffic-road-set-4_7
+  - first:
+      213: 1421266244268364071
+    second: Traffic-road-set-4_8
+  - first:
+      213: -6556601441718581396
+    second: Traffic-road-set-4_9
+  - first:
+      213: 6872396451268376400
+    second: Traffic-road-set-4_10
+  - first:
+      213: -2781627268744057002
+    second: Traffic-road-set-4_11
+  - first:
+      213: 161893389801785372
+    second: Traffic-road-set-4_12
+  - first:
+      213: -4608180476361031235
+    second: Traffic-road-set-4_13
+  - first:
+      213: 8650865666750615615
+    second: Traffic-road-set-4_14
+  - first:
+      213: -7904949627169251725
+    second: Traffic-road-set-4_15
+  - first:
+      213: 3878481649487150361
+    second: Traffic-road-set-4_16
+  - first:
+      213: 2088287751577015044
+    second: Traffic-road-set-4_17
+  - first:
+      213: -6405514259560844125
+    second: Traffic-road-set-4_18
+  - first:
+      213: 5197872861395787319
+    second: Traffic-road-set-4_19
+  - first:
+      213: -3116607760869097203
+    second: Traffic-road-set-4_20
+  - first:
+      213: 7246206780252879688
+    second: Traffic-road-set-4_21
+  - first:
+      213: -1795123352414656895
+    second: Traffic-road-set-4_22
+  - first:
+      213: 682875475721189745
+    second: Traffic-road-set-4_23
+  - first:
+      213: 1379413681712682263
+    second: Traffic-road-set-4_24
+  - first:
+      213: 5377531970239400032
+    second: Traffic-road-set-4_25
+  - first:
+      213: -6234066395424374962
+    second: Traffic-road-set-4_26
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: iPhone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Traffic-road-set-4_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 9095
+        width: 1033
+        height: 1178
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 21683eed5eebb9ed0800000000000000
+      internalID: -2406119681403156974
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Traffic-road-set-4_1
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 6721
+        width: 1092
+        height: 1157
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5e5b080e15138f760800000000000000
+      internalID: 7491792207859463653
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Traffic-road-set-4_2
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 3012
+        width: 1602
+        height: 1629
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 131b93cedf7400920800000000000000
+      internalID: 2954440511470547249
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Traffic-road-set-4_3
+      rect:
+        serializedVersion: 2
+        x: 2976
+        y: 637
+        width: 2060
+        height: 1923
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 91fc36030f7ce96a0800000000000000
+      internalID: -6440490582675304679
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Traffic-road-set-4_4
+      rect:
+        serializedVersion: 2
+        x: 7156
+        y: 1442
+        width: 2217
+        height: 451
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 89264f21796fa3f50800000000000000
+      internalID: 6862068110970872472
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Traffic-road-set-4_5
+      rect:
+        serializedVersion: 2
+        x: 7391
+        y: 0
+        width: 2198
+        height: 265
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fbc36affde7903aa0800000000000000
+      internalID: -6183275239927563073
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Traffic-road-set-4_6
+      rect:
+        serializedVersion: 2
+        x: 11296
+        y: 108
+        width: 2335
+        height: 255
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 24f2f06e82c1062d0800000000000000
+      internalID: -3287596765996437694
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Traffic-road-set-4_7
+      rect:
+        serializedVersion: 2
+        x: 11022
+        y: 1579
+        width: 2158
+        height: 255
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0e598836abbddfd00800000000000000
+      internalID: 1008203485181154784
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Traffic-road-set-4_8
+      rect:
+        serializedVersion: 2
+        x: 15692
+        y: 971
+        width: 1746
+        height: 765
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7219ed47e1a59b310800000000000000
+      internalID: 1421266244268364071
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Traffic-road-set-4_9
+      rect:
+        serializedVersion: 2
+        x: 19362
+        y: 206
+        width: 2609
+        height: 1570
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c67cc842ab54205a0800000000000000
+      internalID: -6556601441718581396
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Traffic-road-set-4_10
+      rect:
+        serializedVersion: 2
+        x: 23502
+        y: 1108
+        width: 1943
+        height: 1845
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 057b1813928af5f50800000000000000
+      internalID: 6872396451268376400
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Traffic-road-set-4_11
+      rect:
+        serializedVersion: 2
+        x: 26230
+        y: 4268
+        width: 1445
+        height: 1295
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 65f68fc9cbca569d0800000000000000
+      internalID: -2781627268744057002
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Traffic-road-set-4_12
+      rect:
+        serializedVersion: 2
+        x: 22580
+        y: 8035
+        width: 1942
+        height: 1472
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c188e962e292f3200800000000000000
+      internalID: 161893389801785372
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Traffic-road-set-4_13
+      rect:
+        serializedVersion: 2
+        x: 22698
+        y: 10488
+        width: 1059
+        height: 1040
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: db14c9d95447c00c0800000000000000
+      internalID: -4608180476361031235
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Traffic-road-set-4_14
+      rect:
+        serializedVersion: 2
+        x: 11591
+        y: 12824
+        width: 2217
+        height: 1363
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f301b4a5d7c0e0870800000000000000
+      internalID: 8650865666750615615
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Traffic-road-set-4_15
+      rect:
+        serializedVersion: 2
+        x: 8784
+        y: 12470
+        width: 942
+        height: 962
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 37e5831423afb4290800000000000000
+      internalID: -7904949627169251725
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Traffic-road-set-4_16
+      rect:
+        serializedVersion: 2
+        x: 4173
+        y: 4248
+        width: 1491
+        height: 2276
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 91d7d89d28223d530800000000000000
+      internalID: 3878481649487150361
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Traffic-road-set-4_17
+      rect:
+        serializedVersion: 2
+        x: 3113
+        y: 8860
+        width: 1080
+        height: 961
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4031c8555a61bfc10800000000000000
+      internalID: 2088287751577015044
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Traffic-road-set-4_18
+      rect:
+        serializedVersion: 2
+        x: 4134
+        y: 10586
+        width: 1216
+        height: 1001
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3a43d2308ba0b17a0800000000000000
+      internalID: -6405514259560844125
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Traffic-road-set-4_19
+      rect:
+        serializedVersion: 2
+        x: 1386
+        y: 11882
+        width: 1256
+        height: 1079
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 73e9323f3dd822840800000000000000
+      internalID: 5197872861395787319
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Traffic-road-set-4_20
+      rect:
+        serializedVersion: 2
+        x: 3820
+        y: 12706
+        width: 1334
+        height: 1158
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d010c2501c59fb4d0800000000000000
+      internalID: -3116607760869097203
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Traffic-road-set-4_21
+      rect:
+        serializedVersion: 2
+        x: 6469
+        y: 12627
+        width: 1374
+        height: 1256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 84bfff1bca2bf8460800000000000000
+      internalID: 7246206780252879688
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Traffic-road-set-4_22
+      rect:
+        serializedVersion: 2
+        x: 6076
+        y: 8448
+        width: 1217
+        height: 1255
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 186e05b62d07617e0800000000000000
+      internalID: -1795123352414656895
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Traffic-road-set-4_23
+      rect:
+        serializedVersion: 2
+        x: 6744
+        y: 10802
+        width: 1118
+        height: 1158
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 179ff2c80af0a7900800000000000000
+      internalID: 682875475721189745
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Traffic-road-set-4_24
+      rect:
+        serializedVersion: 2
+        x: 16496
+        y: 12647
+        width: 2453
+        height: 1118
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7155cc06f69a42310800000000000000
+      internalID: 1379413681712682263
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Traffic-road-set-4_25
+      rect:
+        serializedVersion: 2
+        x: 20068
+        y: 12686
+        width: 1903
+        height: 1099
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0680d66e5d4d0aa40800000000000000
+      internalID: 5377531970239400032
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Traffic-road-set-4_26
+      rect:
+        serializedVersion: 2
+        x: 23482
+        y: 4955
+        width: 1335
+        height: 1255
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e4fb78294a52c79a0800000000000000
+      internalID: -6234066395424374962
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
