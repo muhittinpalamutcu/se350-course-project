@@ -6,7 +6,7 @@ public class PoliceCarController : MonoBehaviour
 {
     [HideInInspector]
     public Transform player1Car;
-    public Rigidbody2D player1CarRigid;
+    //public Rigidbody2D player1CarRigid;
 
     public float speed;
     public float stopDistance;
@@ -16,6 +16,9 @@ public class PoliceCarController : MonoBehaviour
     private bool gameOver;
 
     Rigidbody2D policeCarRigidBody2d;
+
+    private Queue<PointInSpace> pointsInSpace = new Queue<PointInSpace>();
+    private float delay = 0.5f;
 
     void Start()
     {
@@ -31,7 +34,7 @@ public class PoliceCarController : MonoBehaviour
             if (Vector2.Distance(transform.position, player1Car.position) > stopDistance && player1CarVelocity > 5)
             {
                 transform.position = Vector2.SmoothDamp(transform.position, player1Car.position, ref velocity, 0.5f, speed);
-                transform.rotation = player1Car.rotation;
+                //transform.rotation = player1Car.rotation;
             }
             else
             {
@@ -39,9 +42,24 @@ public class PoliceCarController : MonoBehaviour
                 if (player1CarVelocity < 5 || chase)
                 {
                     transform.position = Vector2.SmoothDamp(transform.position, player1Car.position, ref velocity, 0.5f, speed);
-                    transform.rotation = player1Car.rotation;
+                    //transform.rotation = player1Car.rotation;
                 }
             }
+        }
+    }
+
+    //Instantiate(policecar, position and rotation);
+
+    private void LateUpdate()
+    {
+        // Add the current target position to the list of positions
+        pointsInSpace.Enqueue(new PointInSpace() { rotation = player1Car.rotation, Time = Time.time });
+
+        // Move the camera to the position of the target X seconds ago 
+        while (pointsInSpace.Count > 0 && pointsInSpace.Peek().Time <= Time.time - delay + Mathf.Epsilon)
+        {
+            // transform.position = Vector3.Lerp(transform.position, pointsInSpace.Dequeue().Position + offset, Time.deltaTime * speed);
+            transform.rotation = pointsInSpace.Dequeue().rotation;
         }
     }
 
@@ -71,6 +89,12 @@ public class PoliceCarController : MonoBehaviour
             policeCarRigidBody2d.velocity = Vector2.zero;
             policeCarRigidBody2d.freezeRotation = true;
         }
+    }
+
+    private struct PointInSpace
+    {
+        public float Time;
+        public Quaternion rotation;
     }
 
 }

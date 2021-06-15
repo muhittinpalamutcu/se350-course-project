@@ -4,7 +4,9 @@ using UnityEngine;
 
 public class CarInputHandler : MonoBehaviour
 {
-    CarController carController;
+    public CarController carController;
+
+    [HideInInspector]
     public PoliceCarController policeCarController;
 
     Rigidbody2D carRigidbody2D;
@@ -15,11 +17,12 @@ public class CarInputHandler : MonoBehaviour
     {
         carController = GetComponent<CarController>();
         carRigidbody2D = GetComponent<Rigidbody2D>();
+
     }
 
     void Start()
     {
-
+        policeCarController = GameObject.FindGameObjectWithTag("PoliceCar").GetComponent<PoliceCarController>();
     }
 
     // Update is called once per frame

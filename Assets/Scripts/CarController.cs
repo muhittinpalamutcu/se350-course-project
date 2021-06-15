@@ -13,7 +13,7 @@ public class CarController : MonoBehaviour
 
     private float accelerationInput = 0;
     private float steeringInput = 0;
-    private float rotatingAngle = 0;
+    private float rotatingAngle = -90f;
     private float velocityVsUp = 0;
 
     Rigidbody2D carRigidbody2D;
@@ -77,6 +77,7 @@ public class CarController : MonoBehaviour
         Vector2 engineForceVector = transform.up * accelerationInput * accelerationRate;
 
         carRigidbody2D.AddForce(engineForceVector, ForceMode2D.Force);
+
     }
 
     void ApplySteering()
@@ -86,7 +87,6 @@ public class CarController : MonoBehaviour
 
         //if minSpeedBeforeTurning 0 then our car not rotating at all
         rotatingAngle -= steeringInput * turnFactor * minSpeedBeforeTurning;
-
         carRigidbody2D.MoveRotation(rotatingAngle);
     }
 
