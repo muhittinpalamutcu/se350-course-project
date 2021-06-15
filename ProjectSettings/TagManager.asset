@@ -5,6 +5,8 @@ TagManager:
   serializedVersion: 2
   tags:
   - Player1Car
+  - Border
+  - PoliceCar
   layers:
   - Default
   - TransparentFX
