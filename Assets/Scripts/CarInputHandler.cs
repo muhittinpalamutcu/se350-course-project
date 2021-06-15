@@ -5,6 +5,8 @@ using UnityEngine;
 public class CarInputHandler : MonoBehaviour
 {
     public CarController carController;
+    [HideInInspector]
+    public GameController gameController;
 
     [HideInInspector]
     public PoliceCarController policeCarController;
@@ -23,6 +25,7 @@ public class CarInputHandler : MonoBehaviour
     void Start()
     {
         policeCarController = GameObject.FindGameObjectWithTag("PoliceCar").GetComponent<PoliceCarController>();
+        gameController = GameObject.FindGameObjectWithTag("GameController").GetComponent<GameController>();
     }
 
     // Update is called once per frame
@@ -57,6 +60,7 @@ public class CarInputHandler : MonoBehaviour
         {
             Debug.Log("Player caught - game over");
             gameOver = true;
+            gameController.GameOver = true;
             policeCarController.GameOver = true;
         }
     }
