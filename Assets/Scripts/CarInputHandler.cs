@@ -14,12 +14,12 @@ public class CarInputHandler : MonoBehaviour
     Rigidbody2D carRigidbody2D;
 
     private bool gameOver = false;
+    private bool gameWin = false;
 
     void Awake()
     {
         carController = GetComponent<CarController>();
         carRigidbody2D = GetComponent<Rigidbody2D>();
-
     }
 
     void Start()
@@ -31,7 +31,7 @@ public class CarInputHandler : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (!gameOver)
+        if (!gameOver && !gameWin)
         {
             Vector2 inputVector = Vector2.zero;
             inputVector.x = Input.GetAxis("Horizontal");
@@ -63,8 +63,14 @@ public class CarInputHandler : MonoBehaviour
             gameController.GameOver = true;
             policeCarController.GameOver = true;
         }
-    }
 
+        if (collision.gameObject.tag == "FinishArea")
+        {
+            gameWin = true;
+            gameController.GameWin = true;
+            Debug.Log("Player win the game");
+        }
+    }
     private void OnCollisionExit2D(Collision2D collision)
     {
         if (collision.gameObject.tag == "Border")

@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &1634699538628960761
+--- !u!1 &4154706902211860918
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,40 +8,40 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 9147831544125798158}
-  - component: {fileID: 2200699040523724959}
-  - component: {fileID: 8423819290146845142}
-  - component: {fileID: 1454262894121547567}
+  - component: {fileID: 1611412987664468973}
+  - component: {fileID: 7366856182920810482}
+  - component: {fileID: 3986720130874324914}
+  - component: {fileID: 2860962693764561010}
   m_Layer: 0
-  m_Name: carType1
+  m_Name: carType7
   m_TagString: RoadCars
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &9147831544125798158
+--- !u!4 &1611412987664468973
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1634699538628960761}
-  m_LocalRotation: {x: 0, y: 0, z: 1, w: 0}
-  m_LocalPosition: {x: -24.63, y: 16.93, z: 0}
+  m_GameObject: {fileID: 4154706902211860918}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.7, y: 0.7, z: 1}
   m_Children:
-  - {fileID: 1256463681021430274}
+  - {fileID: 4026077615462520419}
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 180}
---- !u!50 &2200699040523724959
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!50 &7366856182920810482
 Rigidbody2D:
   serializedVersion: 4
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1634699538628960761}
+  m_GameObject: {fileID: 4154706902211860918}
   m_BodyType: 0
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
@@ -55,20 +55,20 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 5
---- !u!61 &8423819290146845142
+--- !u!61 &3986720130874324914
 BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1634699538628960761}
+  m_GameObject: {fileID: 4154706902211860918}
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0.012241572}
+  m_Offset: {x: 0.017539158, y: 0.0035078526}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -79,15 +79,15 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 1.8324285}
+  m_Size: {x: 0.8807337, y: 1.7085824}
   m_EdgeRadius: 0
---- !u!114 &1454262894121547567
+--- !u!114 &2860962693764561010
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1634699538628960761}
+  m_GameObject: {fileID: 4154706902211860918}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 78bf44aca19d8ff47bf78a90e630afd6, type: 3}
@@ -95,9 +95,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gameController: {fileID: 0}
   currentposition: {x: 0, y: 0, z: 0}
-  startPositionGameController: {x: 0, y: 0, z: 0}
-  endPositionGameController: {x: 0, y: 0, z: 0}
---- !u!1 &7013703977346983142
+  startPositionGameController1: {x: 0, y: 0, z: 0}
+  endPositionGameController1: {x: 0, y: 0, z: 0}
+  startPositionGameController2: {x: 0, y: 0, z: 0}
+  endPositionGameController2: {x: 0, y: 0, z: 0}
+--- !u!1 &6873653115742988142
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -105,36 +107,36 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 1256463681021430274}
-  - component: {fileID: 6384713807060038976}
+  - component: {fileID: 4026077615462520419}
+  - component: {fileID: 7217228040832405526}
   m_Layer: 0
-  m_Name: PlayerCars_6
+  m_Name: PlayerCars_5
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &1256463681021430274
+--- !u!4 &4026077615462520419
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7013703977346983142}
+  m_GameObject: {fileID: 6873653115742988142}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 9147831544125798158}
+  m_Father: {fileID: 1611412987664468973}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!212 &6384713807060038976
+--- !u!212 &7217228040832405526
 SpriteRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7013703977346983142}
+  m_GameObject: {fileID: 6873653115742988142}
   m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
@@ -167,13 +169,13 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 200
-  m_Sprite: {fileID: -9139599052101362697, guid: 75dc2f9fdd4d4433eb6910af7a14415c, type: 3}
+  m_SortingOrder: 300
+  m_Sprite: {fileID: 3877954475548709501, guid: 75dc2f9fdd4d4433eb6910af7a14415c, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1.14, y: 1.93}
+  m_Size: {x: 1.14, y: 1.83}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1

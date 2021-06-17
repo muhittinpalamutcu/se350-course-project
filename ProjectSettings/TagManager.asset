@@ -8,6 +8,7 @@ TagManager:
   - Border
   - PoliceCar
   - RoadCars
+  - FinishArea
   layers:
   - Default
   - TransparentFX
@@ -15,9 +16,9 @@ TagManager:
   - 
   - Water
   - UI
+  - FinishLayer
   - 
-  - 
-  - 
+  - PlayerLayer
   - 
   - 
   - 

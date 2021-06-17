@@ -8,6 +8,9 @@ public class PoliceCarController : MonoBehaviour
     public Transform player1Car;
     //public Rigidbody2D player1CarRigid;
 
+    [HideInInspector]
+    public GameController gameController;
+
     public float speed;
     public float stopDistance;
     private Vector2 velocity = Vector2.zero;
@@ -24,12 +27,13 @@ public class PoliceCarController : MonoBehaviour
     {
         player1Car = GameObject.FindGameObjectWithTag("Player1Car").transform;
         policeCarRigidBody2d = GetComponent<Rigidbody2D>();
+        gameController = GameObject.FindGameObjectWithTag("GameController").GetComponent<GameController>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (player1Car != null && !gameOver)
+        if (player1Car != null && !gameOver && !gameController.GameWin)
         {
             if (Vector2.Distance(transform.position, player1Car.position) > stopDistance && player1CarVelocity > 5)
             {
@@ -46,6 +50,13 @@ public class PoliceCarController : MonoBehaviour
                 }
             }
         }
+
+        if (gameController.GameWin)
+        {
+            //Debug.Log("Player escaped");
+            policeCarRigidBody2d.velocity = Vector2.zero;
+            policeCarRigidBody2d.freezeRotation = true;
+        }
     }
 
     //Instantiate(policecar, position and rotation);
@@ -60,6 +71,17 @@ public class PoliceCarController : MonoBehaviour
         {
             // transform.position = Vector3.Lerp(transform.position, pointsInSpace.Dequeue().Position + offset, Time.deltaTime * speed);
             transform.rotation = pointsInSpace.Dequeue().rotation;
+        }
+    }
+
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.tag == "Player1Car")
+        {
+            Debug.Log("Player caught - game over");
+            policeCarRigidBody2d.velocity = Vector2.zero;
+            policeCarRigidBody2d.freezeRotation = true;
         }
     }
 
@@ -79,16 +101,6 @@ public class PoliceCarController : MonoBehaviour
     {
         get { return gameOver; }
         set { gameOver = value; }
-    }
-
-    private void OnCollisionEnter2D(Collision2D collision)
-    {
-        if (collision.gameObject.tag == "Player1Car")
-        {
-            Debug.Log("Player caught - game over");
-            policeCarRigidBody2d.velocity = Vector2.zero;
-            policeCarRigidBody2d.freezeRotation = true;
-        }
     }
 
     private struct PointInSpace

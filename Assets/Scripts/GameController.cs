@@ -4,26 +4,36 @@ using UnityEngine;
 
 public class GameController : MonoBehaviour
 {
-    private bool gameOver =false;
-    public GameObject player1Car;
-    public GameObject policeCar;
-    public GameObject roadCar1;
-    public GameObject roadCar2;
+    public Transform player1CarStartPoint;
+    public Transform policeCarStartPoint;
+    public Transform roadCar1StartPoint;
+    public Transform roadCar1EndPoint;
+    public Transform roadCar2StartPoint;
+    public Transform roadCar2EndPoint;
+    public Transform roadCar3StartPoint;
+    public Transform roadCar3EndPoint;
+    public Transform roadCar4StartPoint;
+    public Transform roadCar4EndPoint;
+
+    public List<GameObject> cars = new List<GameObject>();
+
     float spawnTimer = 2f;
     float timer = 0f;
+    private bool gameOver = false;
+    private bool gameWin = false;
     // Start is called before the first frame update
     void Start()
     {
-        Instantiate(player1Car, new Vector3(-30.7999992f, 6.15999985f, 0), transform.rotation * Quaternion.Euler(0f, 0f, 270f));
-        Instantiate(policeCar, new Vector3(-46.1100006f, 5.98000002f, 0), transform.rotation * Quaternion.Euler(0f, 0f, 270f));
-        Instantiate(roadCar1, new Vector3(-24.6299992f, 16.9300003f, 0f), Quaternion.identity);
-
-        Instantiate(roadCar2, new  Vector3(-26.7000008f, -14.3599997f, 0f), Quaternion.identity);
+        Instantiate(cars[0], player1CarStartPoint.position, transform.rotation * Quaternion.Euler(0f, 0f, 270f));
+        Instantiate(cars[1], policeCarStartPoint.position, transform.rotation * Quaternion.Euler(0f, 0f, 270f));
+        Instantiate(cars[Random.Range(2, cars.Count)], roadCar1StartPoint.position, transform.rotation * Quaternion.Euler(0f, 0f, 180f));
+        Instantiate(cars[Random.Range(2, cars.Count)], roadCar2StartPoint.position, Quaternion.identity);
+        Instantiate(cars[Random.Range(2, cars.Count)], roadCar3StartPoint.position, transform.rotation * Quaternion.Euler(0f, 0f, 180f));
+        Instantiate(cars[Random.Range(2, cars.Count)], roadCar4StartPoint.position, Quaternion.identity);
     }
     private void Update()
     {
-       
-        if (!gameOver)
+        if (!gameOver && !gameWin)
         {
             timer += Time.deltaTime;
             if (timer >= spawnTimer)
@@ -31,15 +41,17 @@ public class GameController : MonoBehaviour
                 Spawner();
             }
         }
-        
+
     }
     void Spawner()
     {
-        Instantiate(roadCar1, new Vector3(-24.6299992f, 16.9300003f, 0f), Quaternion.identity);
-        Instantiate(roadCar2, new Vector3(-26.7000008f, -14.3599997f, 0f), Quaternion.identity);
+        Instantiate(cars[Random.Range(2, cars.Count)], roadCar1StartPoint.position, transform.rotation * Quaternion.Euler(0f, 0f, 180f));
+        Instantiate(cars[Random.Range(2, cars.Count)], roadCar2StartPoint.position, Quaternion.identity);
+        Instantiate(cars[Random.Range(2, cars.Count)], roadCar3StartPoint.position, transform.rotation * Quaternion.Euler(0f, 0f, 180f));
+        Instantiate(cars[Random.Range(2, cars.Count)], roadCar4StartPoint.position, Quaternion.identity);
         timer = 0f;
         spawnTimer = 2f;
-     }
+    }
 
     public bool GameOver
     {
@@ -47,5 +59,9 @@ public class GameController : MonoBehaviour
         set { gameOver = value; }
     }
 
-
+    public bool GameWin
+    {
+        get { return gameWin; }
+        set { gameWin = value; }
+    }
 }
