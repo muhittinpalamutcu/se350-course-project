@@ -15,11 +15,26 @@ public class CarController : MonoBehaviour
     private float steeringInput = 0;
     private float rotatingAngle = -90f;
     private float velocityVsUp = 0;
+    float particleEmissionRate = 0;
+
+    TrailRenderer[] trailRenderers;
+    ParticleSystem[] particleSystems;
+    ParticleSystem.EmissionModule particleSystemEmissionModuleLeftWheel;
+    ParticleSystem.EmissionModule particleSystemEmissionModuleRightWheel;
+
 
     Rigidbody2D carRigidbody2D;
     void Awake()
     {
         carRigidbody2D = GetComponent<Rigidbody2D>();
+        trailRenderers = GetComponentsInChildren<TrailRenderer>();
+        particleSystems = GetComponentsInChildren<ParticleSystem>();
+
+        particleSystemEmissionModuleLeftWheel = particleSystems[0].emission;
+        particleSystemEmissionModuleRightWheel = particleSystems[1].emission;
+
+        particleSystemEmissionModuleLeftWheel.rateOverTime = 0;
+        particleSystemEmissionModuleRightWheel.rateOverTime = 0;
     }
 
     // Start is called before the first frame update
@@ -31,7 +46,22 @@ public class CarController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        //slowly decreases the particles we're emitting
+        particleEmissionRate = Mathf.Lerp(particleEmissionRate, 0, Time.deltaTime * 5);
+        particleSystemEmissionModuleLeftWheel.rateOverTime = particleEmissionRate;
+        particleSystemEmissionModuleRightWheel.rateOverTime = particleEmissionRate;
 
+        if (IsTireScreeching())
+        {
+            trailRenderers[0].emitting = true;
+            trailRenderers[1].emitting = true;
+            particleEmissionRate = Mathf.Abs(GetLateralVelocity() * 5);
+        }
+        else
+        {
+            trailRenderers[0].emitting = false;
+            trailRenderers[1].emitting = false;
+        }
     }
 
     void FixedUpdate()
@@ -102,6 +132,21 @@ public class CarController : MonoBehaviour
     {
         steeringInput = inputVector.x;
         accelerationInput = inputVector.y;
+    }
+
+    float GetLateralVelocity()
+    {
+        return Vector2.Dot(transform.right, carRigidbody2D.velocity);
+    }
+
+    public bool IsTireScreeching()
+    {
+        if (Mathf.Abs(GetLateralVelocity()) > 1)
+        {
+            return true;
+        }
+
+        return false;
     }
 
 }

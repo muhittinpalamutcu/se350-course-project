@@ -145,5 +145,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player1Car: {fileID: 0}
+  gameController: {fileID: 0}
   speed: 30
   stopDistance: 2

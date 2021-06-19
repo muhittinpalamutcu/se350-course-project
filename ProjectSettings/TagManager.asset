@@ -46,3 +46,9 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: Skidmarks
+    uniqueID: 2180751313
+    locked: 0
+  - name: Particle
+    uniqueID: 293088585
+    locked: 0
