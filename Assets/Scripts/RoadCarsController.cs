@@ -38,7 +38,8 @@ public class RoadCarsController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (!gameController.GameOver && !gameController.GameWin)
+        // if (!gameController.GameOver && !gameController.GameWin)
+        if (!gameController.GameOver)
         {
             if (startPositionGameController1 == currentposition)
             {

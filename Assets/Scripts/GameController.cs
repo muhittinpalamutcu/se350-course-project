@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class GameController : MonoBehaviour
 {
@@ -15,12 +16,18 @@ public class GameController : MonoBehaviour
     public Transform roadCar4StartPoint;
     public Transform roadCar4EndPoint;
 
+    public Canvas infoCanvas;
+    public Text countDown;
+
     public List<GameObject> cars = new List<GameObject>();
 
     float spawnTimer = 2f;
     float timer = 0f;
+    float timeToStart = 3f;
     private bool gameOver = false;
     private bool gameWin = false;
+    private bool startGame = false;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -33,13 +40,26 @@ public class GameController : MonoBehaviour
     }
     private void Update()
     {
-        if (!gameOver && !gameWin)
+        //if (!gameOver && !gameWin)
+        if (!gameOver)
         {
             timer += Time.deltaTime;
             if (timer >= spawnTimer)
             {
                 Spawner();
             }
+        }
+
+        if (timeToStart > 0)
+        {
+            timeToStart -= Time.deltaTime;
+            string seconds = (timeToStart % 60).ToString("f0");
+            countDown.text = seconds;
+        }
+        else
+        {
+            StartGame = true;
+            infoCanvas.enabled = false;
         }
 
     }
@@ -63,5 +83,11 @@ public class GameController : MonoBehaviour
     {
         get { return gameWin; }
         set { gameWin = value; }
+    }
+
+    public bool StartGame
+    {
+        get { return startGame; }
+        set { startGame = value; }
     }
 }

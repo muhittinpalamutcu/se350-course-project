@@ -31,20 +31,23 @@ public class CarInputHandler : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (!gameOver && !gameWin)
+        if (gameController.StartGame)
         {
-            Vector2 inputVector = Vector2.zero;
-            inputVector.x = Input.GetAxis("Horizontal");
-            inputVector.y = Input.GetAxis("Vertical");
+            if (!gameOver && !gameWin)
+            {
+                Vector2 inputVector = Vector2.zero;
+                inputVector.x = Input.GetAxis("Horizontal");
+                inputVector.y = Input.GetAxis("Vertical");
 
-            carController.SetInputVector(inputVector);
-            policeCarController.Player1CarVelocity = carRigidbody2D.velocity.magnitude;
-        }
-        else
-        {
-            carRigidbody2D.velocity = Vector2.zero;
-            carRigidbody2D.freezeRotation = true;
-            carController.SetInputVector(Vector2.zero);
+                carController.SetInputVector(inputVector);
+                policeCarController.Player1CarVelocity = carRigidbody2D.velocity.magnitude;
+            }
+            else
+            {
+                carRigidbody2D.velocity = Vector2.zero;
+                carRigidbody2D.freezeRotation = true;
+                carController.SetInputVector(Vector2.zero);
+            }
         }
     }
 

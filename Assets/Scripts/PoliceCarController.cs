@@ -33,7 +33,7 @@ public class PoliceCarController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (player1Car != null && !gameOver && !gameController.GameWin)
+        if (player1Car != null && !gameOver && !gameController.GameWin && gameController.StartGame)
         {
             if (Vector2.Distance(transform.position, player1Car.position) > stopDistance && player1CarVelocity > 5)
             {
