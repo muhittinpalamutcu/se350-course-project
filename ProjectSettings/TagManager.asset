@@ -9,6 +9,7 @@ TagManager:
   - PoliceCar
   - RoadCars
   - FinishArea
+  - StartBorder
   layers:
   - Default
   - TransparentFX
@@ -17,9 +18,9 @@ TagManager:
   - Water
   - UI
   - FinishLayer
-  - 
+  - PoliceLayer
   - PlayerLayer
-  - 
+  - StartLayer
   - 
   - 
   - 
