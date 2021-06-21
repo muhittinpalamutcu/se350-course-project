@@ -23,11 +23,16 @@ public class GameController : MonoBehaviour
 
     float spawnTimer = 2f;
     float timer = 0f;
+    float winTimer = 3f;
     float timeToStart = 3f;
     private bool gameOver = false;
     private bool gameWin = false;
     private bool startGame = false;
+    
 
+    private SceneTransitions sceneTransitions;
+
+    
     // Start is called before the first frame update
     void Start()
     {
@@ -37,6 +42,9 @@ public class GameController : MonoBehaviour
         Instantiate(cars[Random.Range(2, cars.Count)], roadCar2StartPoint.position, Quaternion.identity);
         Instantiate(cars[Random.Range(2, cars.Count)], roadCar3StartPoint.position, transform.rotation * Quaternion.Euler(0f, 0f, 180f));
         Instantiate(cars[Random.Range(2, cars.Count)], roadCar4StartPoint.position, Quaternion.identity);
+
+        sceneTransitions = FindObjectOfType<SceneTransitions>();
+    
     }
     private void Update()
     {
@@ -48,6 +56,8 @@ public class GameController : MonoBehaviour
             {
                 Spawner();
             }
+
+            
         }
 
         if (timeToStart > 0)
@@ -61,8 +71,28 @@ public class GameController : MonoBehaviour
             StartGame = true;
             infoCanvas.enabled = false;
         }
+        if (gameWin)
+        {
+
+            if (winTimer > 0)
+            {
+                winTimer -= Time.deltaTime;
+            }
+            else
+            {
+                sceneTransitions.LoadScene("Win");
+            }
+
+        }
+        if (gameOver)
+        {
+            sceneTransitions.LoadScene("Lose");
+        }
+        ///if -> gameOver to losescene
+        /// /if -> gameWin to winscene
 
     }
+
     void Spawner()
     {
         Instantiate(cars[Random.Range(2, cars.Count)], roadCar1StartPoint.position, transform.rotation * Quaternion.Euler(0f, 0f, 180f));
@@ -71,6 +101,10 @@ public class GameController : MonoBehaviour
         Instantiate(cars[Random.Range(2, cars.Count)], roadCar4StartPoint.position, Quaternion.identity);
         timer = 0f;
         spawnTimer = 2f;
+    }
+    public void doExitGame()
+    {
+        Application.Quit();
     }
 
     public bool GameOver
