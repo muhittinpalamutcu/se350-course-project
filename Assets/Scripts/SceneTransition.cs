@@ -3,16 +3,17 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-
-public class SceneTransitions : MonoBehaviour
+public class SceneTransition : MonoBehaviour
 {
+
     private Animator transitionAnim;
-    private void Start()
+
+    // Start is called before the first frame update
+    void Start()
     {
         transitionAnim = GetComponent<Animator>();
     }
 
-    // Update is called once per frame
     public void LoadScene(string sceneName)
     {
         StartCoroutine(Transition(sceneName));
@@ -25,7 +26,7 @@ public class SceneTransitions : MonoBehaviour
         SceneManager.LoadScene(sceneName);
     }
 
-    public void DoExitGame()
+    public void QuitGame()
     {
         Application.Quit();
     }

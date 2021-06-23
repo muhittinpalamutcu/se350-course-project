@@ -46,7 +46,7 @@ public class CarController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //slowly decreases the particles we're emitting
+        //slowly decreases the particles that we're emitting
         particleEmissionRate = Mathf.Lerp(particleEmissionRate, 0, Time.deltaTime * 5);
         particleSystemEmissionModuleLeftWheel.rateOverTime = particleEmissionRate;
         particleSystemEmissionModuleRightWheel.rateOverTime = particleEmissionRate;
@@ -105,7 +105,6 @@ public class CarController : MonoBehaviour
 
         //For the force that is going to be applied to car
         Vector2 engineForceVector = transform.up * accelerationInput * accelerationRate;
-
         carRigidbody2D.AddForce(engineForceVector, ForceMode2D.Force);
 
     }

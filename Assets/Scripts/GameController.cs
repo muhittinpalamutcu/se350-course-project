@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class GameController : MonoBehaviour
 {
@@ -18,21 +19,19 @@ public class GameController : MonoBehaviour
 
     public Canvas infoCanvas;
     public Text countDown;
-
     public List<GameObject> cars = new List<GameObject>();
 
     float spawnTimer = 2f;
     float timer = 0f;
-    float winTimer = 3f;
-    float timeToStart = 3f;
+    float winTimer = 7f;
+    float timeToStart = 5f;
     private bool gameOver = false;
     private bool gameWin = false;
     private bool startGame = false;
-    
 
-    private SceneTransitions sceneTransitions;
 
-    
+    public Animator transitionAnim;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -42,10 +41,8 @@ public class GameController : MonoBehaviour
         Instantiate(cars[Random.Range(2, cars.Count)], roadCar2StartPoint.position, Quaternion.identity);
         Instantiate(cars[Random.Range(2, cars.Count)], roadCar3StartPoint.position, transform.rotation * Quaternion.Euler(0f, 0f, 180f));
         Instantiate(cars[Random.Range(2, cars.Count)], roadCar4StartPoint.position, Quaternion.identity);
-
-        sceneTransitions = FindObjectOfType<SceneTransitions>();
-    
     }
+
     private void Update()
     {
         //if (!gameOver && !gameWin)
@@ -56,8 +53,6 @@ public class GameController : MonoBehaviour
             {
                 Spawner();
             }
-
-            
         }
 
         if (timeToStart > 0)
@@ -71,26 +66,36 @@ public class GameController : MonoBehaviour
             StartGame = true;
             infoCanvas.enabled = false;
         }
+
         if (gameWin)
         {
-
             if (winTimer > 0)
             {
                 winTimer -= Time.deltaTime;
             }
             else
             {
-                sceneTransitions.LoadScene("Win");
+                LoadScene("Win");
             }
 
         }
+
         if (gameOver)
         {
-            sceneTransitions.LoadScene("Lose");
+            LoadScene("Lose");
         }
-        ///if -> gameOver to losescene
-        /// /if -> gameWin to winscene
+    }
 
+    public void LoadScene(string sceneName)
+    {
+        StartCoroutine(Transition(sceneName));
+    }
+
+    IEnumerator Transition(string sceneName)
+    {
+        transitionAnim.SetTrigger("end");
+        yield return new WaitForSeconds(1);
+        SceneManager.LoadScene(sceneName);
     }
 
     void Spawner()
@@ -101,10 +106,6 @@ public class GameController : MonoBehaviour
         Instantiate(cars[Random.Range(2, cars.Count)], roadCar4StartPoint.position, Quaternion.identity);
         timer = 0f;
         spawnTimer = 2f;
-    }
-    public void doExitGame()
-    {
-        Application.Quit();
     }
 
     public bool GameOver

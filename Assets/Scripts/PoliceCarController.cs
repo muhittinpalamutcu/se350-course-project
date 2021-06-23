@@ -42,7 +42,6 @@ public class PoliceCarController : MonoBehaviour
             }
             else
             {
-                //stop moving case 
                 if (player1CarVelocity < 5 || chase)
                 {
                     transform.position = Vector2.SmoothDamp(transform.position, player1Car.position, ref velocity, 0.5f, speed);
@@ -66,7 +65,7 @@ public class PoliceCarController : MonoBehaviour
         // Add the current target position to the list of positions
         pointsInSpace.Enqueue(new PointInSpace() { rotation = player1Car.rotation, Time = Time.time });
 
-        // Move the camera to the position of the target X seconds ago 
+        // Move the car to the position of the target 0.5 seconds ago 
         while (pointsInSpace.Count > 0 && pointsInSpace.Peek().Time <= Time.time - delay + Mathf.Epsilon)
         {
             // transform.position = Vector3.Lerp(transform.position, pointsInSpace.Dequeue().Position + offset, Time.deltaTime * speed);

@@ -74,7 +74,6 @@ public class RoadCarsController : MonoBehaviour
         if (collision.gameObject.tag == "Border")
         {
             Destroy(this.gameObject);
-
         }
     }
 
